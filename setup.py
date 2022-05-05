@@ -13,18 +13,19 @@ except ImportError:
 
 setup(
     name='transgit',
-    version='0.0.1',
-    url='https://pedrohavay.com',
+    version='1.0.2',
+    url='https://github.com/pedrohavay/transgit',
     description='Open source tool to export Gitlab repositories to Github.',
+    long_description=open('README.rst').read(),
     keywords='Git,Github,Gitlab',
     author='Pedro Havay',
-    author_email='admin@pedrohavay.com',
+    author_email='pedrohavay@outlook.com',
     maintainer='Pedro Havay',
     platforms=['any'],
     zip_safe=False,
     packages=find_packages(),
     include_package_data=True,
-    python_requires='>=3.6',
+    python_requires='>=3.5',
     entry_points={
         "console_scripts": [
             "transgit = transgit.cli:main",
@@ -34,11 +35,9 @@ setup(
         "click",
         "colorama",
         "requests",
-        "git-filter-repo"
+        "git-filter-repo",
+        "gitpython"
     ],
     extras_require={
-        'complete': [
-            # 'pyOpenSSL'
-        ],
     }
 )

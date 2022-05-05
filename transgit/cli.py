@@ -1,12 +1,10 @@
 import os
 import urllib3
-import fileinput
 import subprocess
 from git import Repo
 import click as click
 from colorama import init, Fore
 
-from transgit.exceptions import catch, TransGitError
 from transgit.constants import LOGO
 from transgit.utils import colored
 from transgit.actions import get_repos, prepare_repo_github, archive_project
@@ -75,11 +73,6 @@ def transgit(url, token, guser, personal_token, group=None, clone_folder=None, o
         # Get git config file content
         with open(config_file, 'w+') as fd:
             fd.write(content_config)
-
-        # # Change origin URL to GitHub Repo
-        # with fileinput.FileInput(config_file, inplace=True, backup='.bak') as file:
-        #     for line in file:
-        #         print(line.replace(repo['clone_target'], new_origin), end='')
 
         # Open repo with Git
         git_repo = Repo(repo_folder)
