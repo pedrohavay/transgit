@@ -1,5 +1,5 @@
-.. image:: docs/transgit.png
-  :alt: Alternative text
+.. image:: https://github.com/pedrohavay/transgit/blob/main/docs/transgit.png?raw=true
+  :alt: TransGit Logo
 
 TransGit
 ========

@@ -13,7 +13,7 @@ except ImportError:
 
 setup(
     name='transgit',
-    version='1.0.2',
+    version='1.0.22',
     url='https://github.com/pedrohavay/transgit',
     description='Open source tool to export Gitlab repositories to Github.',
     long_description=open('README.rst').read(),
